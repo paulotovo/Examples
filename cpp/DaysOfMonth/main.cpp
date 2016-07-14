@@ -47,7 +47,6 @@ int calculateDaysOfMonth(int year, int month)
           retDays = 28;
       break;
   }
-
   return retDays;
 }
 
