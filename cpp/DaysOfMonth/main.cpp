@@ -1,11 +1,11 @@
 #include "stdio.h"
 
 /*
-- Qualquer ano igualmente divisivel por 4, é ano bissexto.
-- Qualquer ano que seja igualmente divisivel por 100 (ex: 1900), é um ano bissexto SOMENTE se ele tambem for divisivel por 400.  Ex: 1600, 2000 e 2400.
+- Qualquer ano igualmente divisivel por 4, Ã© ano bissexto.
+- Qualquer ano que seja igualmente divisivel por 100 (ex: 1900), Ã© um ano bissexto SOMENTE se ele tambem for divisivel por 400.  Ex: 1600, 2000 e 2400.
 */
 
-// Verifica se é ano bissexto
+// Verifica se Ã© ano bissexto
 bool isLeapYear(int year)
 {
   if (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)) 
@@ -14,7 +14,7 @@ bool isLeapYear(int year)
     return false;
 }
 
-// Calcula os dias do mês
+// Calcula os dias do mÃªs
 int calculateDaysOfMonth(int year, int month)
 {
   int retDays=0;
@@ -47,26 +47,25 @@ int calculateDaysOfMonth(int year, int month)
           retDays = 28;
       break;
   }
-
   return retDays;
 }
 
 
 int main()
 {
-	int year,month;
+  int year,month;
   int calcDays;
  
   while(true)
-  {
-	  // A função printf() escreve na tela.
-	  printf("Digite o ano: ");
+  { 
+    // A funÃ§Ã£o printf() escreve na tela. 
+    printf("Digite o ano: ");
  
-	  // A função scanf obtém o valor digitado.
-	  scanf("%d", &year);
+    // A funÃ§Ã£o scanf obtÃ©m o valor digitado.
+    scanf("%d", &year);
 
-	  printf("Digite o mes: ");
-	  scanf("%d", &month);
+    printf("Digite o mes: "); 
+    scanf("%d", &month);
 
     calcDays = calculateDaysOfMonth(year,month);
 
