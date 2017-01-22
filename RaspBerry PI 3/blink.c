@@ -1,3 +1,6 @@
+// To compile: 
+// gcc -Wall -o blink blink.c -lwiringPi
+
 #include <stdio.h>
 #include <wiringPi.h>
 
