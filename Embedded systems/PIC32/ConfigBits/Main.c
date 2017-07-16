@@ -15,9 +15,8 @@
  
 #define  MAIN_C
 
-#include <plib.h>      // Use PIC32 Peripheral Libraries for MPLAB C32 Compiler - Legacy
-
-
+// Adds support for PIC32 Peripheral library functions and macros
+#include <plib.h>   
 
 #define USE_CONFIG_WITH_CRYSTAL_20MHZ_PLL
 // #define USE_CONFIG_WITH_CRYSTAL_20MHZ
@@ -160,3 +159,16 @@
 #else
 	#error "No settings for processor."
 #endif	
+
+// Let compile time pre-processor calculate the CORE_TICK_PERIOD
+#define SYS_FREQ 			(80000000L)
+#define TOGGLES_PER_SEC	    10
+#define CORE_TICK_RATE	    (SYS_FREQ/2/TOGGLES_PER_SEC)
+
+int main(void)
+{
+  while(1)	
+  {
+
+  }
+}
